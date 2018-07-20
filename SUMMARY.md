@@ -13,4 +13,5 @@
     * [JavaScript Scaffoldのダウンロード](contents/4.api-1.md)
     * [Node.jsによるAPIの実装](contents/4.api-2.md)
     * [コネクタを利用するAPIの実装](contents/4.api-3.md)
+    * [コネクタ使ったAPIの編集](contents/4.api-4.md)
 
