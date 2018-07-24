@@ -1,18 +1,11 @@
-# Oracle Mobile Cloud Serviceハンズオン - Part 1: バックエンド開発編
+# Oracle Autonomous Mobile Cloud Enterpriseハンズオン - Part 1: バックエンド開発編
 
 
 ## はじめに
 
-Oracle Mobile Cloud Service （以下MCS）は、オラクルが提供する「Mobile Backend as a Service（MBaaS）」です。企業はMCSを使用することで、拡張性と可用性に優れたセキュアなモバイル・アプリを素早く作成および展開できます。またMCSは、既存のＩＴシステムの活用を簡素化にも役立ちます。
+Oracle Autonomous Mobile Cloud Enterprise （以下AMCe）は、オラクルが提供する「Mobile Backend as a Service（MBaaS）」です。エンタープライズ・モバイルとチャットボットのシンプル化を目指しています。企業はAMCeを使用することで、拡張性と可用性に優れたセキュアなモバイル・アプリを素早く作成および展開できます。任意のバックエンド・システムに接続するモバイル・アプリケーションとインテリジェント・チャットボットを構築してデプロイできます。またAMCeは、既存のＩＴシステムの活用を簡素化にも役立ちます。
 
-このハンズオンでは、MCSの基本機能を実際に体験できます。
-
-
-## 前提条件
-
-TODO チュートリアルにしたがってアプリケーションを作成するにあたって必要なソフトウェアや必要な Oracle Cloud のサブスクリプションなど。
-
-TODO 先にやっておいた方がよいチュートリアルがあれえば、それも書く。
+このハンズオンでは、AMCeの基本機能を実際に体験できます。
 
 ## このチュートリアルの表記方法
 
