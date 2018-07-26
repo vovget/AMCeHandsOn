@@ -1,0 +1,4 @@
+# _book フォルダは要らない
+_book/
+
+package/**/*.ts
