@@ -1,0 +1,424 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>カスタムAPIの実装 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="4.api-1.html" />
+    
+    
+    <link rel="prev" href="3.bs-1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    はじめに
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="2.backend.html">
+            
+                <a href="2.backend.html">
+            
+                    
+                    モバイル・バックエンドの作成とテスト
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="2.backend-1.html">
+            
+                <a href="2.backend-1.html">
+            
+                    
+                    モバイル・バックエンドの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2.backend-2.html">
+            
+                <a href="2.backend-2.html">
+            
+                    
+                    RAMLドキュメントを使用したAPIの定義とテスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="2.backend-3.html">
+            
+                <a href="2.backend-3.html">
+            
+                    
+                    モバイル・バックエンドとカスタムAPIの関連づけ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="2.backend-4.html">
+            
+                <a href="2.backend-4.html">
+            
+                    
+                    カスタムAPIのコール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="2.backend-5.html">
+            
+                <a href="2.backend-5.html">
+            
+                    
+                    モバイル・バックエンドの診断情報の確認
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="3.bs.html">
+            
+                <a href="3.bs.html">
+            
+                    
+                    業務システムへの接続の構成
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="3.bs-1.html">
+            
+                <a href="3.bs-1.html">
+            
+                    
+                    SOAP Webサービスに対するコネクタの定義とテスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="4.api.html">
+            
+                <a href="4.api.html">
+            
+                    
+                    カスタムAPIの実装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="4.api-1.html">
+            
+                <a href="4.api-1.html">
+            
+                    
+                    JavaScript Scaffoldのダウンロード
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="4.api-2.html">
+            
+                <a href="4.api-2.html">
+            
+                    
+                    Node.jsによるAPIの実装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="4.api-3.html">
+            
+                <a href="4.api-3.html">
+            
+                    
+                    コネクタを利用するAPIの実装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="4.api-4.html">
+            
+                <a href="4.api-4.html">
+            
+                    
+                    コネクタ使ったAPIの編集
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >カスタムAPIの実装</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x30AB;&#x30B9;&#x30BF;&#x30E0;api&#x306E;&#x5B9F;&#x88C5;">&#x30AB;&#x30B9;&#x30BF;&#x30E0;API&#x306E;&#x5B9F;&#x88C5;</h1>
+<p>&#x4ECA;&#x56DE;&#x306E;&#x30CF;&#x30F3;&#x30BA;&#x30AA;&#x30F3;&#x3067;&#x306F;&#x3001;&#x300E;<a href="2.backend-2.html">&#x30E2;&#x30D0;&#x30A4;&#x30EB;&#x30FB;&#x30D0;&#x30C3;&#x30AF;&#x30A8;&#x30F3;&#x30C9;&#x306E;&#x4F5C;&#x6210;&#x3068;&#x30C6;&#x30B9;&#x30C8; &#x2015;RAML&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x3092;&#x4F7F;&#x7528;&#x3057;&#x305F;API&#x306E;&#x5B9A;&#x7FA9;&#x3068;&#x30C6;&#x30B9;&#x30C8;</a>&#x300F;&#x3067;&#x30AB;&#x30B9;&#x30BF;&#x30E0;API&#x300C;FIF<em>IncidentReport</em><xx>&#x300D;&#x306E;&#x8A2D;&#x8A08;&#x60C5;&#x5831;&#x3092;&#x8A18;&#x8FF0;&#x3057;&#x305F;RAML&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x3092;&#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;&#x3053;&#x3053;&#x3067;&#x306F;&#x3001;Node.js&#x3092;&#x4F7F;&#x7528;&#x3057;&#x3066;&#x30AB;&#x30B9;&#x30BF;&#x30E0;API&#x300C;FIF<em>IncidentReport</em><xx>&#x300D;&#x3092;&#x5B9F;&#x88C5;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;</xx></xx></p>
+<ul>
+<li><a href="4.api-1.html">JavaScript Scaffold&#x306E;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;</a></li>
+<li><a href="4.api-2.html">Node.js&#x306B;&#x3088;&#x308B;API&#x306E;&#x5B9F;&#x88C5;</a></li>
+<li><a href="4.api-3.html">&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;API&#x306E;&#x5B9F;&#x88C5;</a></li>
+<li><a href="4.api-4.html">&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x4F7F;&#x3063;&#x305F;API&#x306E;&#x7DE8;&#x96C6;</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3.bs-1.html" class="navigation navigation-prev " aria-label="Previous page: SOAP Webサービスに対するコネクタの定義とテスト">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="4.api-1.html" class="navigation navigation-next " aria-label="Next page: JavaScript Scaffoldのダウンロード">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"カスタムAPIの実装","level":"1.4","depth":1,"next":{"title":"JavaScript Scaffoldのダウンロード","level":"1.4.1","depth":2,"path":"contents/4.api-1.md","ref":"contents/4.api-1.md","articles":[]},"previous":{"title":"SOAP Webサービスに対するコネクタの定義とテスト","level":"1.3.1","depth":2,"path":"contents/3.bs-1.md","ref":"contents/3.bs-1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contents/4.api.md","mtime":"2018-07-26T07:43:39.621Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-26T09:11:47.955Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

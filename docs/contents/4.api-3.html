@@ -1,0 +1,649 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>コネクタを利用するAPIの実装 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="4.api-4.html" />
+    
+    
+    <link rel="prev" href="4.api-2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    はじめに
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="2.backend.html">
+            
+                <a href="2.backend.html">
+            
+                    
+                    モバイル・バックエンドの作成とテスト
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="2.backend-1.html">
+            
+                <a href="2.backend-1.html">
+            
+                    
+                    モバイル・バックエンドの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2.backend-2.html">
+            
+                <a href="2.backend-2.html">
+            
+                    
+                    RAMLドキュメントを使用したAPIの定義とテスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="2.backend-3.html">
+            
+                <a href="2.backend-3.html">
+            
+                    
+                    モバイル・バックエンドとカスタムAPIの関連づけ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="2.backend-4.html">
+            
+                <a href="2.backend-4.html">
+            
+                    
+                    カスタムAPIのコール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="2.backend-5.html">
+            
+                <a href="2.backend-5.html">
+            
+                    
+                    モバイル・バックエンドの診断情報の確認
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="3.bs.html">
+            
+                <a href="3.bs.html">
+            
+                    
+                    業務システムへの接続の構成
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="3.bs-1.html">
+            
+                <a href="3.bs-1.html">
+            
+                    
+                    SOAP Webサービスに対するコネクタの定義とテスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="4.api.html">
+            
+                <a href="4.api.html">
+            
+                    
+                    カスタムAPIの実装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="4.api-1.html">
+            
+                <a href="4.api-1.html">
+            
+                    
+                    JavaScript Scaffoldのダウンロード
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="4.api-2.html">
+            
+                <a href="4.api-2.html">
+            
+                    
+                    Node.jsによるAPIの実装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="4.api-3.html">
+            
+                <a href="4.api-3.html">
+            
+                    
+                    コネクタを利用するAPIの実装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="4.api-4.html">
+            
+                <a href="4.api-4.html">
+            
+                    
+                    コネクタ使ったAPIの編集
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >コネクタを利用するAPIの実装</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;api&#x306E;&#x5B9F;&#x88C5;">&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;API&#x306E;&#x5B9F;&#x88C5;</h2>
+<p>&#x3053;&#x3053;&#x3067;&#x306F;&#x300E;<a href="3.bs-1.html">&#x696D;&#x52D9;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x3078;&#x306E;&#x63A5;&#x7D9A;&#x306E;&#x69CB;&#x6210;</a>&#x300F;&#x3067;&#x5B9A;&#x7FA9;&#x3057;&#x305F;SOAP Web&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x547C;&#x3073;&#x51FA;&#x3057;&#x306E;&#x30B3;&#x30CD;&#x30AF;&#x30BF;FIF<em>SoapWS</em><xx>&#x3092;&#x30AB;&#x30B9;&#x30BF;&#x30E0;API&#x306B;&#x304B;&#x3089;&#x547C;&#x3073;&#x51FA;&#x3059;&#x51E6;&#x7406;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x307F;&#x307E;&#x3059;&#x3002;</xx></p>
+<h3 id="packagejson&#x306E;&#x7DE8;&#x96C6;">Package.json&#x306E;&#x7DE8;&#x96C6;</h3>
+<p>&#x30AB;&#x30B9;&#x30BF;&#x30E0;API&#x304B;&#x3089;&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;&#x5834;&#x5408;&#x306F;&#x3001;<strong>package.json</strong>&#x306B;&#x5229;&#x7528;&#x3059;&#x308B;&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x306E;&#x30D1;&#x30B9;&#x3068;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x3092;&#x8A18;&#x8FF0;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p><strong>package.json&#x306E;&#x5909;&#x66F4;&#x5F8C;</strong> </p>
+<pre><code class="lang-javascript">{
+  <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;fif_incidentreport_&lt;xx&gt;&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-string">&quot;1.0.0&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;&#x30A4;&#x30F3;&#x30B7;&#x30C7;&#x30F3;&#x30C8;&#x30FB;&#x30EC;&#x30DD;&#x30FC;&#x30C8;&#x3092;&#x53D6;&#x5F97;&#x30FB;&#x7DE8;&#x96C6;&#x3057;&#x307E;&#x3059;&#x3002;&quot;</span>,
+  <span class="hljs-string">&quot;main&quot;</span> : <span class="hljs-string">&quot;fif_incidentreport_&lt;xx&gt;.js&quot;</span>,
+  <span class="hljs-string">&quot;oracleMobile&quot;</span> : {
+    <span class="hljs-string">&quot;dependencies&quot;</span> : {
+      <span class="hljs-string">&quot;apis&quot;</span> : { },
+      <span class="hljs-string">&quot;connectors&quot;</span> : {
+        <span class="hljs-string">&quot;/mobile/connector/FIF_SoapWS_&lt;xx&gt;&quot;</span>:<span class="hljs-string">&quot;1.0&quot;</span>                &#x2190;&#x8FFD;&#x52A0;
+      }
+    }
+  }
+}
+</code></pre>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong>&#x300C;FIF<em>SoapWS</em><xx>&#x300D;&#x306F;&#x4F5C;&#x6210;&#x3057;&#x305F;&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x306E;API&#x540D;&#x3068;&#x7F6E;&#x304D;&#x63DB;&#x3048;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</xx></p>
+</blockquote>
+<h3 id="&#x30A8;&#x30F3;&#x30C9;&#x30DD;&#x30A4;&#x30F3;&#x30C8;post-incidents">&#x30A8;&#x30F3;&#x30C9;&#x30DD;&#x30A4;&#x30F3;&#x30C8;POST /incidents</h3>
+<p>&#x30A8;&#x30F3;&#x30C9;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x300C;POST /incidents&#x300D;&#x3067;&#x306F;&#x3001;SOAP&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x306E;&#x30A8;&#x30F3;&#x30C9;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x300C;CreateIncident&#x300D;&#x3092;&#x547C;&#x3073;&#x51FA;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p><strong>POST /incidents&#x306E;&#x5909;&#x66F4;&#x524D; </strong></p>
+<pre><code class="lang-javascript">service.post(<span class="hljs-string">&apos;/mobile/custom/FIF_IncidentReport_xx/incidents&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>) </span>{
+  <span class="hljs-keyword">var</span> result = {};
+  <span class="hljs-keyword">var</span> statusCode = <span class="hljs-number">201</span>;
+  <span class="hljs-keyword">if</span> (statusCode == <span class="hljs-number">201</span>){
+    <span class="hljs-keyword">var</span> acceptType = req.accepts([<span class="hljs-string">&apos;application/json&apos;</span>]);
+    <span class="hljs-keyword">if</span> (acceptType == <span class="hljs-string">&apos;application/json&apos;</span>){
+      result = {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">20934</span>,
+        <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Lynn&apos;s Leaking Water Heater&quot;</span>,
+        <span class="hljs-string">&quot;contact&quot;</span>: {
+          <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Lynn Adams&quot;</span>,
+          <span class="hljs-string">&quot;street&quot;</span>: <span class="hljs-string">&quot;45 O&apos;Connor Street&quot;</span>,
+          <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Ottawa&quot;</span>,
+          <span class="hljs-string">&quot;postalcode&quot;</span>: <span class="hljs-string">&quot;a1a1a1&quot;</span>,
+          <span class="hljs-string">&quot;username&quot;</span>: <span class="hljs-string">&quot;johnbeta&quot;</span>
+        },
+        <span class="hljs-string">&quot;status&quot;</span> : <span class="hljs-string">&quot;New&quot;</span>,
+        <span class="hljs-string">&quot;driveTime&quot;</span> : <span class="hljs-number">30</span>,
+        <span class="hljs-string">&quot;priority&quot;</span> : <span class="hljs-string">&quot;high&quot;</span>,
+        <span class="hljs-string">&quot;notes&quot;</span> : <span class="hljs-string">&quot;My notes&quot;</span>,
+        <span class="hljs-string">&quot;createdon&quot;</span>: <span class="hljs-string">&quot;2014-01-20 23:15:03 EDT&quot;</span>,
+        <span class="hljs-string">&quot;imageLink&quot;</span>: <span class="hljs-string">&quot;storage/...&quot;</span>
+      };
+    }
+  }
+  res.send(statusCode, result);
+});
+</code></pre>
+<p><strong>POST /incidents&#x306E;&#x5909;&#x66F4;&#x5F8C; </strong></p>
+<pre><code class="lang-javascript">service.post(<span class="hljs-string">&apos;/mobile/custom/FIF_IncidentReport_xx/incidents&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>) </span>{
+  req.oracleMobile.connectors.FIF_SoapWS_xx.post(<span class="hljs-string">&apos;CreateIncident&apos;</span>,
+    {Body: {CreateIncident: req.body}},
+    {inType: <span class="hljs-string">&quot;json&quot;</span>}
+  ).then(
+    <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">success</span>) </span>{
+      res.send(success.statusCode, success.result);
+    },
+    <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">failure</span>) </span>{
+      res.send(<span class="hljs-number">500</span>, failure.error);
+    }
+  );
+});
+</code></pre>
+<blockquote>
+<p><strong>&#x5099;&#x8003;&#xFF1A;</strong>C:\HOL\AMCe\code\ IncidentPOST.txt&#x3092;&#x30B3;&#x30D4;&#x30FC;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;</p>
+</blockquote>
+<h3 id="&#x30A8;&#x30F3;&#x30C9;&#x30DD;&#x30A4;&#x30F3;&#x30C8;-get-incidentsid">&#x30A8;&#x30F3;&#x30C9;&#x30DD;&#x30A4;&#x30F3;&#x30C8; GET /incidents/{id}</h3>
+<p>&#x30A8;&#x30F3;&#x30C9;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x300C;GET /incidents/{id}&#x300D;&#x3067;&#x306F;&#x3001;SOAP&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x306E;&#x30A8;&#x30F3;&#x30C9;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x300C;GetIncidentById&#x300D;&#x3092;&#x547C;&#x3073;&#x51FA;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p><strong>GET /incidents/{id} &#x306E;&#x5909;&#x66F4;&#x524D; </strong></p>
+<pre><code class="lang-javascript">service.get(<span class="hljs-string">&apos;/mobile/custom/FIF_IncidentReport_xx/incidents/:id&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>) </span>{
+  <span class="hljs-keyword">var</span> result = {};
+  <span class="hljs-keyword">var</span> statusCode = <span class="hljs-number">200</span>;
+  <span class="hljs-keyword">if</span> (statusCode == <span class="hljs-number">200</span>){
+    <span class="hljs-keyword">var</span> acceptType = req.accepts([<span class="hljs-string">&apos;application/json&apos;</span>]);
+      <span class="hljs-keyword">if</span> (acceptType == <span class="hljs-string">&apos;application/json&apos;</span>){
+        result = {
+          <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">20934</span>,
+          <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Lynn&apos;s Leaking Water Heater&quot;</span>,
+          <span class="hljs-string">&quot;contact&quot;</span>: {
+          <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Lynn Adams&quot;</span>,
+          <span class="hljs-string">&quot;street&quot;</span>: <span class="hljs-string">&quot;45 O&apos;Connor Street&quot;</span>,
+          <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Ottawa&quot;</span>,
+          <span class="hljs-string">&quot;postalcode&quot;</span>: <span class="hljs-string">&quot;a1a1a1&quot;</span>,
+          <span class="hljs-string">&quot;username&quot;</span>: <span class="hljs-string">&quot;johnbeta&quot;</span>
+        },
+        <span class="hljs-string">&quot;status&quot;</span> : <span class="hljs-string">&quot;New&quot;</span>,
+        <span class="hljs-string">&quot;driveTime&quot;</span> : <span class="hljs-number">30</span>,
+        <span class="hljs-string">&quot;priority&quot;</span> : <span class="hljs-string">&quot;high&quot;</span>,
+        <span class="hljs-string">&quot;notes&quot;</span> : <span class="hljs-string">&quot;My notes&quot;</span>,
+        <span class="hljs-string">&quot;createdon&quot;</span>: <span class="hljs-string">&quot;2014-01-20 23:15:03 EDT&quot;</span>,
+        <span class="hljs-string">&quot;imageLink&quot;</span>: <span class="hljs-string">&quot;storage/...&quot;</span>
+      };
+    }
+  }
+  res.send(statusCode, result);
+});
+</code></pre>
+<p><strong>GET /incidents/{id} &#x306E;&#x5909;&#x66F4;&#x5F8C; </strong></p>
+<pre><code class="lang-javascript">service.get(<span class="hljs-string">&apos;/mobile/custom/FIF_IncidentReport_xx/incidents/:id&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>) </span>{
+  req.oracleMobile.connectors.FIF_SoapWS_xx.post(
+    <span class="hljs-string">&apos;GetIncidentById&apos;</span>,
+    {Body: {GetIncidentById: {<span class="hljs-string">&apos;IncidentId&apos;</span>: req.params.id}}},
+    {inType: <span class="hljs-string">&quot;json&quot;</span>}
+  ).then(
+    <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">success</span>) </span>{
+      <span class="hljs-keyword">var</span> responsePayload = <span class="hljs-built_in">JSON</span>.parse(success.result);
+      <span class="hljs-keyword">if</span> (responsePayload.Body.GetIncidentByIdResponse == <span class="hljs-literal">null</span>) {
+        res.send(<span class="hljs-number">404</span>, 
+          <span class="hljs-string">&apos;The requested resource could not be found &apos;</span> +
+          <span class="hljs-string">&apos;but may be available again in the future&apos;</span>);
+      }
+      res.send(success.statusCode, responsePayload); 
+    },
+    <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">failure</span>) </span>{
+      res.send(<span class="hljs-number">500</span>, failure.error);
+    } 
+  );
+});
+</code></pre>
+<blockquote>
+<p><strong>&#x5099;&#x8003;&#xFF1A;</strong>C:\HOL\AMCe\code\IncidentGETbyID.txt&#x3092;&#x30B3;&#x30D4;&#x30FC;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;</p>
+</blockquote>
+<h3 id="&#x30A8;&#x30F3;&#x30C9;&#x30DD;&#x30A4;&#x30F3;&#x30C8;-get-incidents">&#x30A8;&#x30F3;&#x30C9;&#x30DD;&#x30A4;&#x30F3;&#x30C8; GET /incidents</h3>
+<p>&#x30A8;&#x30F3;&#x30C9;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x300C;GET /incidents&#x300D;&#x3067;&#x306F;&#x3001;&#x30AF;&#x30A8;&#x30EA;&#x30FC;&#x30FB;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x300C;contact&#x300D;&#x304C;&#x6307;&#x5B9A;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x5834;&#x5408;&#x306F;SOAP&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x306E;&#x30A8;&#x30F3;&#x30C9;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x300C;GetIncidentsByCustomer&#x300D;&#x3092;&#x3001;&#x30AF;&#x30A8;&#x30EA;&#x30FC;&#x30FB;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x300C;technician&#x300D;&#x304C;&#x6307;&#x5B9A;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x5834;&#x5408;&#x306F;&#x3001;SOAP&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x306E;&#x30A8;&#x30F3;&#x30C9;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x300C;GetIncidentsByTechnician&#x300D;&#x3092;&#x547C;&#x3073;&#x51FA;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p><strong>GET /incidents&#x306E;&#x5909;&#x66F4;&#x524D; </strong></p>
+<pre><code class="lang-javascript">service.get(<span class="hljs-string">&apos;/mobile/custom/FIF_IncidentReport_xx/incidents&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>) </span>{
+  <span class="hljs-keyword">var</span> result = {};
+  <span class="hljs-keyword">var</span> statusCode = <span class="hljs-number">200</span>;
+  <span class="hljs-keyword">if</span> (statusCode == <span class="hljs-number">200</span>){
+    <span class="hljs-keyword">var</span> acceptType = req.accepts([<span class="hljs-string">&apos;application/json&apos;</span>]);
+    <span class="hljs-keyword">if</span> (acceptType == <span class="hljs-string">&apos;application/json&apos;</span>){
+      result = {
+        <span class="hljs-string">&quot;items&quot;</span>:
+          [
+            {
+              <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">100</span>,
+              <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Leaking Water Heater&quot;</span>,
+              <span class="hljs-string">&quot;createdon&quot;</span>: <span class="hljs-string">&quot;2014-07-18 17:21:55 PST&quot;</span>,
+              <span class="hljs-string">&quot;contact&quot;</span>: {
+                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Lynn Adams&quot;</span>,
+                <span class="hljs-string">&quot;street&quot;</span>: <span class="hljs-string">&quot;45 O&apos;Connor Street&quot;</span>,
+                <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Ottawa&quot;</span>,
+                <span class="hljs-string">&quot;postalcode&quot;</span>: <span class="hljs-string">&quot;a1a1a1&quot;</span>,
+                <span class="hljs-string">&quot;username&quot;</span>: <span class="hljs-string">&quot;johnbeta&quot;</span>
+              },
+              <span class="hljs-string">&quot;status&quot;</span> : <span class="hljs-string">&quot;New&quot;</span>,
+              <span class="hljs-string">&quot;priority&quot;</span> : <span class="hljs-string">&quot;High&quot;</span>,
+              <span class="hljs-string">&quot;driveTime&quot;</span> : <span class="hljs-number">30</span>,
+              <span class="hljs-string">&quot;imageLink&quot;</span>: <span class="hljs-string">&quot;storage/...&quot;</span>
+            },
+            {
+              <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">101</span>,
+              <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Smoking Oven&quot;</span>,
+              <span class="hljs-string">&quot;createdon&quot;</span>: <span class="hljs-string">&quot;2014-07-18 17:21:55 PST&quot;</span>,
+              <span class="hljs-string">&quot;contact&quot;</span>: {
+                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Lynn Adams&quot;</span>,
+                <span class="hljs-string">&quot;street&quot;</span>: <span class="hljs-string">&quot;45 O&apos;Connor Street&quot;</span>,
+                <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Ottawa&quot;</span>,
+                <span class="hljs-string">&quot;postalcode&quot;</span>: <span class="hljs-string">&quot;a1a1a1&quot;</span>,
+                <span class="hljs-string">&quot;username&quot;</span>: <span class="hljs-string">&quot;johnbeta&quot;</span>
+              },
+              <span class="hljs-string">&quot;status&quot;</span> : <span class="hljs-string">&quot;In Progress&quot;</span>,
+              <span class="hljs-string">&quot;priority&quot;</span> : <span class="hljs-string">&quot;Medium&quot;</span>,
+              <span class="hljs-string">&quot;driveTime&quot;</span> : <span class="hljs-number">10</span>,
+              <span class="hljs-string">&quot;imageLink&quot;</span>: <span class="hljs-string">&quot;storage...&quot;</span>
+            }
+          ]
+      };
+    }
+  }
+  res.send(statusCode, result);
+});
+</code></pre>
+<p><strong>GET /incidents&#x306E;&#x5909;&#x66F4;&#x5F8C; </strong></p>
+<pre><code class="lang-javascript">service.get(<span class="hljs-string">&apos;/mobile/custom/FIF_IncidentReport_xx/incidents&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>) </span>{
+  <span class="hljs-keyword">var</span> payload = {};
+  <span class="hljs-keyword">var</span> resource = {};
+  <span class="hljs-keyword">if</span> (req.query.contact){
+    resource = <span class="hljs-string">&apos;GetIncidentsByCustomer&apos;</span>;
+    payload = {
+      Body: {
+        GetIncidentsByCustomer: {
+          <span class="hljs-string">&apos;UserName&apos;</span>: req.query.contact
+        }
+      }
+    };
+  }
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (req.query.technician){
+    resource = <span class="hljs-string">&apos;GetIncidentsByTechnician&apos;</span>;
+    payload = {
+      Body: {
+        GetIncidentsByTechnician: {
+          <span class="hljs-string">&apos;TechnicianEmailAddress&apos;</span>: req.query.technician
+        }
+      }
+    };
+  }
+  req.oracleMobile.connectors.FIF_SoapWS_xx.post(
+    resource, payload, {inType: <span class="hljs-string">&quot;json&quot;</span>}
+  ).then(
+    <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">success</span>) </span>{
+      responsePayload = <span class="hljs-built_in">JSON</span>.parse(success.result);
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;getIncidents &apos;</span> +
+          <span class="hljs-built_in">JSON</span>.stringify(responsePayload));
+      <span class="hljs-keyword">if</span> (req.query.contact){
+        <span class="hljs-keyword">if</span> (!responsePayload.Body.GetIncidentsByCustomerResponse){
+          res.send(<span class="hljs-number">404</span>, 
+            <span class="hljs-string">&apos;Incidents can not be found for the requested contact&apos;</span>);
+        }
+      }
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (req.query.technician){
+        <span class="hljs-keyword">if</span> (!responsePayload.Body.GetIncidentsByTechnicianResponse){
+          res.send(<span class="hljs-number">404</span>,
+            <span class="hljs-string">&apos;Incidents can not be found for the requested technician&apos;</span>);
+        }
+      }
+      res.send(success.statusCode, responsePayload);
+    },
+    <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">failure</span>) </span>{
+      res.send(<span class="hljs-number">500</span>, failure.error);
+    }
+  );
+});
+</code></pre>
+<blockquote>
+<p><strong>&#x5099;&#x8003;&#xFF1A;</strong>C:\HOL\AMCe\code\IncidentGETbyCUSTOMER.txt&#x3092;&#x30B3;&#x30D4;&#x30FC;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="4.api-2.html" class="navigation navigation-prev " aria-label="Previous page: Node.jsによるAPIの実装">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="4.api-4.html" class="navigation navigation-next " aria-label="Next page: コネクタ使ったAPIの編集">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"コネクタを利用するAPIの実装","level":"1.4.3","depth":2,"next":{"title":"コネクタ使ったAPIの編集","level":"1.4.4","depth":2,"path":"contents/4.api-4.md","ref":"contents/4.api-4.md","articles":[]},"previous":{"title":"Node.jsによるAPIの実装","level":"1.4.2","depth":2,"path":"contents/4.api-2.md","ref":"contents/4.api-2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contents/4.api-3.md","mtime":"2018-07-25T11:28:47.781Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-26T09:11:47.955Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
