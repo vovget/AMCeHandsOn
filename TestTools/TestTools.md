@@ -109,7 +109,7 @@ added 189 packages from 130 contributors in 178.224s
         * backend.authorization.anonymousKey
         * backend.authorization.clientId（オプション、omce-testを使用してテストを送信する際にoauthセキュリティを使用する必要があります）
         * backend.authorization.clientSecret（オプション、omce-testを使用してテストを送信する際にoauthセキュリティを使用する必要があります）
-    * omce-deployなどのAMCeパブリックツールのAPIを使用するコマンドでは、*tools*プロパティが必要です。IDCSのclientIdとclientSecretは、AMCeのMobile Apps - > Instance Detailsページにあります。以下のプロパティが必要です。
+    * omce-deployなどのAMCeパブリックツールのAPIを使用するコマンドでは、*tools*プロパティが必要です。以下のプロパティが必要です。
         * tools.authorization.clientId
         * tools.authorization.clientSecret
 
@@ -125,6 +125,15 @@ added 189 packages from 130 contributors in 178.224s
 
 ```
 omce-ccc <path to toolsConfig.json> [--debug] [--verbose]
+```
+
+```
+[root@localhost u01]# omce-ccc /u01/oracle/fif_api/fif_incidentreport_3d/toolsConfig.json --debug
+Debugger listening on ws://127.0.0.1:9229/41029610-8ed2-4576-86cc-6c417f9f2b5b
+For help, see: https://nodejs.org/en/docs/inspector
+Ping OracleMobileAPI to verify that OracleMobileAPI-uri and authorization are correct.
+OracleMobileAPI ping succeeded!
+The Node server is listening at port 4000
 ```
 
 ### コンテナへのAPIコールの作成
