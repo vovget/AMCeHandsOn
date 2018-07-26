@@ -53,7 +53,7 @@ added 189 packages from 130 contributors in 178.224s
 
 ### OracleMobileAPIをAMCeに追加する
 
-1. AMCeの[**アプリケーション**]タブで、[ **API**]ページを開き、[ **新規API** ]をクリックして、[ **API** ] を選択します。
+1. AMCeの「**アプリケーション**」タブで、「**API**」ページを開き、「**新規API**」をクリックして、「**API**」 を選択します。
 
 2. 「**RAMLドキュメントをアップロード**」をクリックし、システム上の*OracleMobileAPI.raml*ファイルにナビゲートし、「**開く**」をクリックします。
 
@@ -61,11 +61,11 @@ added 189 packages from 130 contributors in 178.224s
 
    ![TestAPIを作成](images/OracleMobileAPI.png)
 
-4. [**セキュリティ**]タブをクリックし、[ログインが必要です]を[OFF]にします。
+4. 「**セキュリティ**」タブをクリックし、「ログインが必要です」を「OFF」にします。
 
    ![ログインが必要ではない](images/OracleMobileAPI_nologin.png)
 
-5. [ **保存**]をクリックします。
+5. 「**保存**」をクリックします。
 
 6. 「**実装**」タブをクリックし、システムから*OracleMobileAPIImpl.zip*をアップロードし、「**保存**」をクリックします。
 
@@ -77,18 +77,18 @@ added 189 packages from 130 contributors in 178.224s
 
 1. 必要に応じて、AMCeでAPIを作成し、エンドポイントとサンプルのリクエスト/レスポンスデータを追加します。
 
-2. AMCeでAPIをバックエンドに関連付けます。（AMCeの[**アプリケーション**]タブで、[モバイル・バックエンド]ページを開き、使用するバックエンドを選択して[開く]ボタンをクリックし、バックエンドの[API]タブをクリックして、[APIの選択]ボタンをクリックします。）
+2. AMCeでAPIをバックエンドに関連付けます。（AMCeの「**アプリケーション**」タブで、「モバイル・バックエンド」ページを開き、使用するバックエンドを選択して「開く」ボタンをクリックし、バックエンドの「API」タブをクリックして、「APIの選択」ボタンをクリックします。）
 
    ![APIの選択](images/OracleMobileAPI_4.png)
 
 3. OracleMobileAPIを同じバックエンドに関連付けます。
 
-4. テストしたいAPIのJavaScriptスカフォールドをダウンロードします。（APIを開き、[ 実装 ]タブをクリックし、[JavaScript Scaffold]ボタンをクリックします）。
+4. テストしたいAPIのJavaScriptスカフォールドをダウンロードします。（APIを開き、「実装」タブをクリックし、「JavaScript Scaffold」ボタンをクリックします）。
 
 5. ダウンロードしたフォルダを解凍し、その内容を確認する。ディレクトリには、次のファイルが含まれている必要があります。
     * package.json - モジュールのマニフェスト
-    * < api name > .js - APIの実装
-    * < api name > .raml - RAML形式のAPI定義
+    * *api name* .js - APIの実装
+    * *api name*.raml - RAML形式のAPI定義
     * swagger.json - Swagger形式のAPI定義
     * toolsConfig.json - バックエンド環境や認証情報、API、AMCeエンドポイント、テスト定義など、このツールが必要とするメタデータが含まれています
     * samples.txt
@@ -98,13 +98,13 @@ added 189 packages from 130 contributors in 178.224s
 
 1. ターミナルウィンドウで、ダウンロードしたscaffoldを含むディレクトリに移動します。
 
-2. `npm install`を実行する
+2. `npm install`を実行します。
 
 3. AMCeインスタンス、バックエンドおよび認可情報を含めるように、API実装の*toolsConfig.json*ファイルを更新します。
 
-    * *baseUrl*はAMCeインスタンスのベースURLです。この値は必須で、AMCeの「アプリケーション - >モバイル・バックエンド- > 使用するバックエンドを選択して[開く]ボタンをクリック- > 設定」ページにあります。
+    * *baseUrl*はAMCeインスタンスのベースURLです。この値は必須で、AMCeの「アプリケーション -> モバイル・バックエンド -> 使用するバックエンドを選択して「開く」ボタンをクリック -> 設定」ページにあります。
     * *tokenEndpoint*は、テナントのIDCS OAuthトークンエンドポイントです。この値は必須で、baseUrlと同様に設定ページにあります。
-    * omce-cccを使用してAPI実装からAMCeインスタンスへのAPI呼び出しを承認するには、*backend*プロパティが必要です。バックエンドの設定ページからバックエンド情報を取得できます。（AMCEで「アプリケーション]タブで、「モバイル・バックエンド]をクリックして、APIを使用しているバックエンドを選択し、[開く]ボタンをクリックし、設定タブをクリックします。）。以下のプロパティが必要です。
+    * omce-cccを使用してAPI実装からAMCeインスタンスへのAPI呼び出しを承認するには、*backend*プロパティが必要です。バックエンドの設定ページからバックエンド情報を取得できます。（AMCEで「アプリケーション」タブで、「モバイル・バックエンド」をクリックして、APIを使用しているバックエンドを選択し、「開く」ボタンをクリックし、設定タブをクリックします。）。以下のプロパティが必要です。
         * backend.backendId
         * backend.authorization.anonymousKey
         * backend.authorization.clientId（オプション、omce-testを使用してテストを送信する際にoauthセキュリティを使用する必要があります）
