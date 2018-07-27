@@ -22,7 +22,7 @@ Oracle Autonomous Mobile Cloud Enterprise（AMCe）には、次のようなカ�
 
 ## 前提条件
 
-* Linux環境
+* Linux/Unix環境
 * Node.jsのローカルインストール（バージョン6.10以降）
 * AMCeのインスタンスにおける開発者のロール
 
@@ -140,10 +140,15 @@ The Node server is listening at port 4000
 
 コンテナが実行されたら、omce-test、cURL、Postman、または他のRESTクライアントを使用して、コンテナにリクエストを送信できます。
 
-デフォルトでは、コンテナはポート4000上で実行されます（これはresource / configMetadata.jsonファイルで変更できます）。
+デフォルトでは、コンテナはポート4000上で実行されます（これはtoolsConfig.jsonファイルで変更できます）。
 
 cURLを使用すると、単純なコマンドは次のようになります。
 
 ```
-$ curl -X GET http://localhost:4000/mobile/custom/<api-name>/<api-version>/<resource-path>
+$ curl -X GET http://localhost:4000/mobile/custom/<api-name>/<resource-path>
+```
+
+```
+[oracle@localhost u01]$ curl -X GET http://localhost:4000/mobile/custom/FIF_IncidentReport_3d/incidents
+{"items":[{"id":100,"title":"Leaking Water Heater","createdon":"2014-07-18 17:21:55 PST","contact":{"name":"Lynn Adams","street":"45 O'Connor Street","city":"Ottawa","postalcode":"a1a1a1","username":"johnbeta"},"status":"New","priority":"High","driveTime":30,"imageLink":"storage/collections/2e029813-d1a9-4957-a69a-fbd0d7431d77/objects/6cdaa3a8-097e-49f7-9bd2-88966c45668f?user=lynn1014"},{"id":101,"title":"Smoking Oven","createdon":"2014-07-18 17:21:55 PST","contact":{"name":"Lynn Adams","street":"45 O'Connor Street","city":"Ottawa","postalcode":"a1a1a1","username":"johnbeta"},"status":"In Progress","priority":"Medium","driveTime":10,"imageLink":"storage/collections/2e029813-d1a9-4957-a69a-fbd0d7431d77/objects/6cdaa3a8-097e-49f7-9bd2-88966c45668f?user=lynn1014"}]}
 ```
