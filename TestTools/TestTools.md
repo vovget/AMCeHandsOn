@@ -18,7 +18,7 @@ Oracle Autonomous Mobile Cloud Enterprise（AMCe）には、次のようなカ�
 ツール・セットは次のもので構成されます。
 
 * ローカルカスタムコードコンテナを起動し、テストを実行し、API実装をAMCeにデプロイするためのコマンドラインツールを含むnpmモジュール（omce-tools）。
-* ローカルマシン上に実行されるノード・コンテナからAMCe内で実行されるコンテナへのAMCe APIコールをプロキシするためのAPI（OracleMobileAPI）。このAPIをAMCeにアップロードし、使用したいAPIを含むバックエンドに関連付ける必要があります。
+* ローカルマシン上に実行されるノード・コンテナからAMCe内で実行されるコンテナへのAMCe APIコールをプロキシするためのAPI（OracleMobileAPI）。このAPIをAMCeにアップロードし、テストするAPIを含むバックエンドに関連付ける必要があります。
 
 ## 前提条件
 
@@ -61,7 +61,7 @@ added 189 packages from 130 contributors in 178.224s
 
    ![TestAPIを作成](images/OracleMobileAPI.png)
 
-4. 「**セキュリティ**」タブをクリックし、「ログインが必要です」を「OFF」にします。
+4. 「**セキュリティ**」タブをクリックし、「**ログインが必要です**」のスイッチを**オフ**にします。
 
    ![ログインが必要ではない](images/OracleMobileAPI_nologin.png)
 
@@ -73,19 +73,19 @@ added 189 packages from 130 contributors in 178.224s
 
 ## API実装のテスト
 
-### テスト用にAPIを設定する
+### テスト用のAPIをセットアップする
 
-1. 必要に応じて、AMCeでAPIを作成し、エンドポイントとサンプルのリクエスト/レスポンスデータを追加します。
+1. まだしていない場合は、AMCeでテストするAPIを作成し、エンドポイントとサンプルのリクエスト/レスポンスデータを追加します。
 
-2. AMCeでAPIをバックエンドに関連付けます。（AMCeの「**アプリケーション**」タブで、「モバイル・バックエンド」ページを開き、使用するバックエンドを選択して「開く」ボタンをクリックし、バックエンドの「API」タブをクリックして、「APIの選択」ボタンをクリックします。）
+2. AMCeでAPIをバックエンドに関連付けます。（AMCeの「**アプリケーション**」タブで、「**モバイル・バックエンド**」ページを開き、使用するバックエンドを選択して「**開く**」ボタンをクリックし、バックエンドの「**API**」タブをクリックして、「**APIの選択**」ボタンをクリックします。）
 
    ![APIの選択](images/OracleMobileAPI_4.png)
 
 3. OracleMobileAPIを同じバックエンドに関連付けます。
 
-4. テストしたいAPIのJavaScriptスカフォールドをダウンロードします。（APIを開き、「実装」タブをクリックし、「JavaScript Scaffold」ボタンをクリックします）。
+4. テストするAPIのJavaScriptスカフォールドをダウンロードします。（APIを開き、「**実装**」タブをクリックし、「**JavaScript Scaffold**」ボタンをクリックします）。
 
-5. ダウンロードしたフォルダを解凍し、その内容を確認する。ディレクトリには、次のファイルが含まれている必要があります。
+5. ダウンロードしたファイルを解凍し、その内容を確認する。ディレクトリには、次のファイルが含まれている必要があります。
     * package.json - モジュールのマニフェスト
     * *api name* .js - APIの実装
     * *api name*.raml - RAML形式のAPI定義
@@ -94,7 +94,7 @@ added 189 packages from 130 contributors in 178.224s
     * samples.txt
     * ReadMe.md
 
-### テストのためのAPI実装の設定
+### テスト用の情報の設定
 
 1. ターミナルウィンドウで、ダウンロードしたscaffoldを含むディレクトリに移動します。
 
@@ -102,18 +102,20 @@ added 189 packages from 130 contributors in 178.224s
 
 3. AMCeインスタンス、バックエンドおよび認可情報を含めるように、API実装の*toolsConfig.json*ファイルを更新します。
 
-    * *baseUrl*はAMCeインスタンスのベースURLです。この値は必須で、AMCeの「アプリケーション -> モバイル・バックエンド -> 使用するバックエンドを選択して「開く」ボタンをクリック -> 設定」ページにあります。
-    * *tokenEndpoint*は、テナントのIDCS OAuthトークンエンドポイントです。この値は必須で、baseUrlと同様に設定ページにあります。
-    * omce-cccを使用してAPI実装からAMCeインスタンスへのAPI呼び出しを承認するには、*backend*プロパティが必要です。バックエンドの設定ページからバックエンド情報を取得できます。（AMCEで「アプリケーション」タブで、「モバイル・バックエンド」をクリックして、APIを使用しているバックエンドを選択し、「開く」ボタンをクリックし、設定タブをクリックします。）。以下のプロパティが必要です。
-        * backend.backendId
-        * backend.authorization.anonymousKey
-        * backend.authorization.clientId（オプション、omce-testを使用してテストを送信する際にoauthセキュリティを使用する必要があります）
-        * backend.authorization.clientSecret（オプション、omce-testを使用してテストを送信する際にoauthセキュリティを使用する必要があります）
-    * omce-deployなどのAMCeパブリックツールのAPIを使用するコマンドでは、*tools*プロパティが必要です。以下のプロパティが必要です。
-        * tools.authorization.clientId
-        * tools.authorization.clientSecret
+    * *baseUrl*はAMCeインスタンスのベースURLです。この値は必須です。
+    * *tokenEndpoint*は、テナントのIDCS OAuthトークンエンドポイントです。この値は必須です。
+    * omce-cccを使用してAPI実装からAMCeインスタンスへのAPI呼び出しを承認するには、*backend*の以下のプロパティが必要です。
+        * *backend.backendId*
+        * *backend.authorization.anonymousKey*
+        * *backend.authorization.clientId*（オプション、omce-testを使用してテストを送信する際にoauthセキュリティを使用する必要があります）
+        * *backend.authorization.clientSecret*（オプション、omce-testを使用してテストを送信する際にoauthセキュリティを使用する必要があります）
+    * omce-deployなどのAMCeパブリックツールのAPIを使用するコマンドでは、*tools*の以下のプロパティが必要です。
+        * *tools.authorization.clientId*
+        * *tools.authorization.clientSecret*
 
-   ![インスタンスのインフォメーション](images/baseinfo.png)
+設定ページから上記の情報を取得できます。 （AMCEで「**アプリケーション**」タブで、「**モバイル・バックエンド**」をクリックして、APIを使用しているバックエンドを選択し、「**開く**」ボタンをクリックし、「**設定**」タブをクリックします。）。![インスタンスのインフォメーション](images/baseinfo.png)
+
+
 
 デフォルトでは、toolsConfig.jsonがAPI実装と同じディレクトリにあるか、または同じディレクトリにあることを前提としています。toolsConfig.jsonを別のディレクトリに移動する場合、modulesLocationを使用してtoolsConfig.jsonに API実装の場所を指定する必要があります。
 
@@ -136,7 +138,7 @@ OracleMobileAPI ping succeeded!
 The Node server is listening at port 4000
 ```
 
-### コンテナへのAPIコールの作成
+### コンテナへのAPIのコール
 
 コンテナが実行されたら、omce-test、cURL、Postman、または他のRESTクライアントを使用して、コンテナにリクエストを送信できます。
 
