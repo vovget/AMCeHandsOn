@@ -1,0 +1,49 @@
+	service.get('/mobile/custom/FIF_IncidentReport_xx/incidents', function(req,res) {
+	  var payload = {};
+	  var resource = {};
+	  if (req.query.contact){
+	    resource = 'GetIncidentsByCustomer';
+	    payload = {
+	      Body: {
+	        GetIncidentsByCustomer: {
+	          'UserName': req.query.contact
+	        }
+	      }
+	    };
+	  }
+	  else if (req.query.technician){
+	    resource = 'GetIncidentsByTechnician';
+	    payload = {
+	      Body: {
+	        GetIncidentsByTechnician: {
+	          'TechnicianEmailAddress': req.query.technician
+	        }
+	      }
+	    };
+	  }
+	  req.oracleMobile.connectors.FIF_SoapWS_xx.post(
+	    resource, payload, {inType: "json"}
+	  ).then(
+	    function (success) {
+	      responsePayload = JSON.parse(success.result);
+	      console.log('getIncidents ' +
+	          JSON.stringify(responsePayload));
+	      if (req.query.contact){
+	        if (!responsePayload.Body.GetIncidentsByCustomerResponse){
+	          res.send(404, 
+	            'Incidents can not be found for the requested contact');
+	        }
+	      }
+	      else if (req.query.technician){
+	        if (!responsePayload.Body.GetIncidentsByTechnicianResponse){
+	          res.send(404,
+	            'Incidents can not be found for the requested technician');
+	        }
+	      }
+	      res.send(success.statusCode, responsePayload);
+	    },
+	    function (failure) {
+	      res.send(500, failure.error);
+	    }
+	  );
+	});

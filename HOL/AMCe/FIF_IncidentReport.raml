@@ -1,0 +1,192 @@
+#%RAML 0.8
+title: FIF_IncidentReport
+version: 1.0
+baseUri: /mobile/custom/FIF_IncidentReport
+protocols: [HTTPS]
+mediaType: "application/json"
+/incidents:
+  displayName: Incident Reports
+  get:
+    description: |
+      お客様または担当エンジニアでフィルタされたインシデント・レポートの一覧を返します。
+      
+    protocols: [HTTPS]
+    queryParameters:
+      contact:
+        displayName: Contact Login ID
+        description: |
+          インシデント・レポートをフィルタするお客様のログインID
+          
+        type: string
+        example: |
+          lynn or larry
+          
+        required: false
+      technician:
+        displayName: Technician ID
+        description: |
+          インシデント・レポートをフィルタする担当エンジニアのメール・アドレス
+          
+        type: string
+        example: |
+          joe@fixit.com or jill@fixit.com
+          
+        required: false
+    responses:
+      200:
+        description: |
+          OK.
+          
+        body:
+          application/json:
+            example: |
+              {
+                  "items":
+                     [
+                       {
+                         "id": 100,
+                         "title": "Leaking Water Heater",
+                         "createdon": "2014-07-18 17:21:55 PST",
+                         "contact": {
+                             "name": "Lynn Adams",
+                             "street": "45 O'Connor Street",
+                             "city": "Ottawa",
+                             "postalcode": "a1a1a1",
+                            "username": "johnbeta"
+                         },
+                         "status" : "New",
+                         "priority" : "High",
+                         "driveTime" : 30,
+                         "imageLink": "storage/collections/2e029813-d1a9-4957-a69a-fbd0d7431d77/objects/6cdaa3a8-097e-49f7-9bd2-88966c45668f?user=lynn1014"
+                       },
+                      {
+                         "id": 101,
+                         "title": "Smoking Oven",
+                         "createdon": "2014-07-18 17:21:55 PST",
+                         "contact": {
+                             "name": "Lynn Adams",
+                             "street": "45 O'Connor Street",
+                             "city": "Ottawa",
+                             "postalcode": "a1a1a1",
+                            "username": "johnbeta"
+                         },
+                         "status" : "In Progress",
+                         "priority" : "Medium",
+                         "driveTime" : 10,
+                         "imageLink": "storage/collections/2e029813-d1a9-4957-a69a-fbd0d7431d77/objects/6cdaa3a8-097e-49f7-9bd2-88966c45668f?user=lynn1014"
+                       }
+                     ]
+                }
+              
+  post:
+    description: |
+      新しいインシデント・レポートを作成します。
+      
+    protocols: [HTTPS]
+    body:
+      application/json:
+        example: |
+          {
+            "Title": "Leaking Water Heater",
+            "UserName": "user" ,
+            "ImageLink": "storage/collections/2e029813-d1a9-4957-a69a-fbd0d7431d77/objects/6cdaa3a8-097e-49f7-9bd2-88966c45668f?user=lynn1014",
+            "Notes": "my water heater is broken"
+          }
+          
+    responses:
+      201:
+        description: |
+          リクエストが完了し、リソースが作成されました。
+          
+        headers:
+          Location:
+            displayName: Location
+            description: |
+              Identifies the location of the newly created resource.
+              
+            type: string
+            example: |
+              /20934
+              
+            required: true
+        body:
+          application/json:
+            example: |
+              {
+                "id": 20934,
+                "title": "Lynn's Leaking Water Heater",
+                      "contact": {
+                          "name": "Lynn Adams",
+                          "street": "45 O'Connor Street",
+                          "city": "Ottawa",
+                          "postalcode": "a1a1a1",
+                         "username": "johnbeta"
+                      },
+                "status" : "New",
+                "driveTime" : 30,
+                "priority" : "high",
+                "notes" : "My notes",
+                "createdon": "2014-01-20 23:15:03 EDT",
+                "imageLink": "storage/collections/2e029813-d1a9-4957-a69a-fbd0d7431d77/objects/6cdaa3a8-097e-49f7-9bd2-88966c45668f?user=lynn1014"
+              }
+              
+  /{id}:
+    uriParameters:
+      id:
+        displayName: id
+        description: |
+          インシデント・レポートのIDを指定します。
+          
+        type: integer
+        required: true
+    get:
+      description: |
+        指定されたIDを持つインシデント・レポートのデータを返します。
+        
+      responses:
+        200:
+          description: |
+            OK.
+            
+          body:
+            application/json:
+              example: |
+                {
+                  "id": 20934,
+                  "title": "Lynn's Leaking Water Heater",
+                        "contact": {
+                            "name": "Lynn Adams",
+                            "street": "45 O'Connor Street",
+                            "city": "Ottawa",
+                            "postalcode": "a1a1a1",
+                           "username": "johnbeta"
+                        },
+                  "status" : "New",
+                  "driveTime" : 30,
+                  "priority" : "high",
+                  "notes" : "My notes",
+                  "createdon": "2014-01-20 23:15:03 EDT",
+                  "imageLink": "storage/collections/2e029813-d1a9-4957-a69a-fbd0d7431d77/objects/6cdaa3a8-097e-49f7-9bd2-88966c45668f?user=lynn1014"
+                }
+                
+        404:
+          description: |
+            The requested resource could not be found but may be available again in the future.
+            
+    /status:
+      get:
+        description: |
+          インシデントのステータスです。
+          
+        responses:
+          200:
+            description: |
+              OK.
+              
+            body:
+              application/json:
+                example: |
+                  { "code": "New",
+                     "notes": "My hot water tank's model is AB234"
+                      }
+                  

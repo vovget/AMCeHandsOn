@@ -1,0 +1,33 @@
+	service.get('/mobile/custom/FIF_IncidentReport_3d/incidents/:id', function(req,res) {
+	  req.oracleMobile.connectors.FIF_SoapWS_3d.post(
+	    'GetIncidentById',
+	    {Body: {GetIncidentById: {'IncidentId': req.params.id}}},
+	    {inType: "json"}
+	  ).then(
+	    function (success) {
+	      var responsePayload = JSON.parse(success.result);
+	      if (responsePayload.Body.GetIncidentByIdResponse == null) {
+	        res.send(404, 
+	          'The requested resource could not be found ' +
+	          'but may be available again in the future');
+	      } else {
+	    	  var incident = responsePayload.Body.GetIncidentByIdResponse.Incident;
+	    	  
+	    	  var responsePayloadNew = {};
+
+	    	  responsePayloadNew.id = incident.Id;
+	    	  responsePayloadNew.status = incident.Status;
+	    	  responsePayloadNew.priority = incident.Priority;
+	    	  responsePayloadNew.notes = incident.Notes;
+	    	  responsePayloadNew.createdon = incident.Date;
+	    	  responsePayloadNew.imageLink = incident.ImageLink;
+	    	  responsePayloadNew.technicianAssigned = incident.TechnicianAssigned;
+	    	  
+	    	  res.send(success.statusCode, responsePayloadNew); 
+	      }
+	    },
+	    function (failure) {
+	      res.send(500, failure.error);
+	    } 
+	  );
+	});

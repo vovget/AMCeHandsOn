@@ -1,0 +1,13 @@
+	service.post('/mobile/custom/FIF_IncidentReport_xx/incidents', function(req,res) {
+	  req.oracleMobile.connectors.FIF_SoapWS_xx.post('CreateIncident',
+	    {Body: {CreateIncident: req.body}},
+	    {inType: "json"}
+	  ).then(
+	    function (success) {
+	      res.send(success.statusCode, success.result);
+	    },
+	    function (failure) {
+	      res.send(500, failure.error);
+	    }
+	  );
+	});

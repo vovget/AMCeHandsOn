@@ -1,0 +1,20 @@
+	service.get('/mobile/custom/FIF_IncidentReport_xx/incidents/:id', function(req,res) {
+	  req.oracleMobile.connectors.FIF_SoapWS_xx.post(
+	    'GetIncidentById',
+	    {Body: {GetIncidentById: {'IncidentId': req.params.id}}},
+	    {inType: "json"}
+	  ).then(
+	    function (success) {
+	      var responsePayload = JSON.parse(success.result);
+	      if (responsePayload.Body.GetIncidentByIdResponse == null) {
+	        res.send(404, 
+	          'The requested resource could not be found ' +
+	          'but may be available again in the future');
+	      }
+	      res.send(success.statusCode, responsePayload); 
+	    },
+	    function (failure) {
+	      res.send(500, failure.error);
+	    } 
+	  );
+	});
